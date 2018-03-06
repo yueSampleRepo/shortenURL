@@ -1,0 +1,24 @@
+docker run -p 3306:3306 --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:latest
+create database urldb;
+use urldb;
+CREATE TABLE urls (idx VARCHAR(20),prefix VARCHAR(8), long_url VARCHAR(255), short_url VARCHAR(20));
+show tabes;
+
+
+
+mysql -h 127.0.0.1 -P 3306 -u root
+
+https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html
+
+import mysql.connector
+cnx = mysql.connector.connect(user='root',host='127.0.0.1',database='urldb')
+cursor = cnx.cursor()
+
+
+insert into urls (idx,long_url,short_url) values ('1','http://www.google.com','')
+select max(idx) from urls
+
+
+https://stackoverflow.com/questions/1119722/base-62-conversion
+
+
